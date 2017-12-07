@@ -24,8 +24,8 @@ bnb.fit(train, train_labels)
 svm = svm.SVC(decision_function_shape='ovo', degree = 3)
 svm.fit(train, train_labels)
 
-bnb = bnb.predict(test)
+bnbpred = bnb.predict(test)
 svmpred = svm.predict(test)
 
-print(accuracy_score(test_labels, bnb)*100)
+print(accuracy_score(test_labels, bnbpred)*100)
 print(accuracy_score(test_labels, svmpred)*100)
